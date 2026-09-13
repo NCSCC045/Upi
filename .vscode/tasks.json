@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run project tests",
+      "type": "shell",
+      "command": ".\\venv\\Scripts\\python -m pytest -q",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "inAgents": true
+    },
+    {
+      "label": "Start FastAPI app",
+      "type": "shell",
+      "command": ".\\venv\\Scripts\\python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "inAgents": true
+    }
+  ]
+}
